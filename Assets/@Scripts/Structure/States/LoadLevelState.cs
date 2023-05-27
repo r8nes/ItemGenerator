@@ -25,20 +25,7 @@ namespace ItemGenerator.State
 
         private void OnLoaded()
         {
-            InitGameWrold();
             _gameStateMachine.Enter<GameLoopState>();
         }
-
-        private void InitGameWrold()
-        {
-            var player = InitPlayer();
-            var circle = InitSpawnCircle();
-
-            circle.transform.parent = player.transform;
-        }
-
-        private GameObject InitPlayer() => _gameFactory.CreatePlayer(Vector2.zero);
-
-        private GameObject InitSpawnCircle() => _gameFactory.CreateSpawnerDistributor();
     }
 }
