@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using ItemGenerator.Assets;
+﻿using ItemGenerator.Assets;
 using UnityEngine;
 
 namespace ItemGenerator.Factory

@@ -1,5 +1,4 @@
 using ItemGenerator.Service;
-using UnityEngine;
 
 namespace ItemGenerator.Factory
 {
