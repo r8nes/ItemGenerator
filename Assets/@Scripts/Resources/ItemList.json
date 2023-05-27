@@ -1,0 +1,49 @@
+{
+  "ObjectsData": [
+    {
+      "objectName": "Fire Sword",
+      "rank": "Unusual",
+      "type": "Equipment",
+      "subType": "Weapons",
+      "description": "A classic one-and-a-half having the ability to light a flame on the entire surface of the blade",
+      "properties": null,
+      "note": "The sword does not require any energy from the owner, the flame does not harm the owner. As long as there is no direct contact between the blade and the skin"
+    },
+    {
+      "objectName": "Spatial jar",
+      "rank": "Legendary",
+      "type": "Equipment",
+      "subType": "Other",
+      "description": "Gold-plated black flask slightly larger than the palm of an adult man",
+      "properties": null,
+      "note": "In order for the flask to recognize you as the owner, you need to drop a drop of blood on its surface after that it cannot be lost and can be stored as a tattoo of the flask on the back of the palm: indestructible until the owner dies"
+    },
+    {
+      "objectName": "Time Cut Katana",
+      "rank": "Rare",
+      "type": "Equipment",
+      "subType": "Lee",
+      "description": "A completely dark crimson katana with a length of about 1.2 meters, taking into account the handle",
+      "properties": "After swiping the blade in any part of space, there remains a trap visible only to the owner of the katana when activated, an effect is produced as if a katana had just been struck at this point in space",
+      "note": "the owner can feel his trap regardless of the distance and can see and hear what is happening within a radius of 10 meters from the trap to activate, the maximum of traps depends on the strength of the owner an ordinary person can set only 5 traps. To activate the trap, you need to hit the bottom of the handle with your little finger."
+    },
+    {
+      "objectName": "Aerokinesis",
+      "rank": "Rare",
+      "type": "Ability",
+      "subType": "Conceptual",
+      "description": "Grants average control over the wind allows you to launch air bullets, spheres, blades, tornadoes with a height of about 3 meters high allows you to suck oxygen on an area of 10 square meters air wall and in a kiss everything is limited by fantasy",
+      "properties": null,
+      "note": null
+    },
+    {
+      "objectName": "Frosty mittens",
+      "rank": "Unusual",
+      "type": "Equipment",
+      "subType": "Gloves",
+      "description": "Thin snow-white leather gloves on the back of the palm snowflake as if made of sapphire. On the fingertips there are claws made of the same material as the snowflake. Grants the ability of cryokines within a radius of 3 meters from the owner, if desired, you can freeze everything below an unusual rank",
+      "properties": null,
+      "note": "When put on, it gives resistance to cold not lower than -50 Celsius"
+    }
+  ]
+}
