@@ -5,7 +5,6 @@ namespace ItemGenerator.UI.Factory
 {
     public interface IUIFactory : IService
     {
-        //void CreateShop();
-        //Task CreateUIRoot();
+        void CreateUIRoot();
     }
 }

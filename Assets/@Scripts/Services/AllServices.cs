@@ -4,7 +4,7 @@ namespace ItemGenerator.Service
     /// Singleton for implementing services via injection into a container.
     /// </summary>
     public class AllServices
-    {
+    { 
         private static AllServices _instance;
 
         public static AllServices Container => _instance ?? (_instance = new AllServices());

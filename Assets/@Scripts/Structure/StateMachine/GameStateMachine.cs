@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ItemGenerator.Factory;
 using ItemGenerator.Service;
 using ItemGenerator.System;
+using ItemGenerator.UI.Factory;
 
 namespace ItemGenerator.State
 {
@@ -22,7 +23,8 @@ namespace ItemGenerator.State
 
                 [typeof(LoadLevelState)] = new LoadLevelState(
                 this,
-                services.Single<IGameFactory>()),
+                services.Single<IGameFactory>(),
+                services.Single<IUIFactory>()),
 
                 [typeof(LoadProgressState)] = new LoadProgressState(this),
                 [typeof(GameLoopState)] = new GameLoopState(this)
@@ -36,12 +38,14 @@ namespace ItemGenerator.State
             IState state = ChangeState<TState>();
             state.Enter();
         }
+
         public void Enter<TState, TPayLoad>(TPayLoad payLoad) where TState :
             class, IPayLoadState<TPayLoad>
         {
             TState state = ChangeState<TState>();
             state.Enter(payLoad);
         }
+
         private TState ChangeState<TState>() where TState :
             class, IExitableState
         {
@@ -52,6 +56,7 @@ namespace ItemGenerator.State
 
             return state;
         }
+
         private TState GetState<TState>() where TState : class, IExitableState => _states[typeof(TState)] as TState;
 
         #endregion

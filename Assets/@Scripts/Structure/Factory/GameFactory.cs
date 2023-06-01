@@ -7,8 +7,6 @@ namespace ItemGenerator.Factory
     {
         private readonly IAssetsProvider _assets;
 
-        private GameObject PlayerGameObject { get; set; }
-
         public GameFactory(IAssetsProvider assets)
         {
             _assets = assets;

@@ -1,6 +1,7 @@
 using ItemGenerator.Assets;
 using ItemGenerator.Factory;
 using ItemGenerator.Service;
+using ItemGenerator.UI.Factory;
 
 namespace ItemGenerator.State
 {
@@ -29,6 +30,8 @@ namespace ItemGenerator.State
             RegisterStateMachine();
             RegisterAssetProvider();
             RegisterGameFactory();
+            RegisterStaticData();
+            RegisterUiFactory();
         }
 
         #region Register
@@ -41,7 +44,22 @@ namespace ItemGenerator.State
 
         private void RegisterGameFactory()
             => _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssetsProvider>()));
+        private void RegisterStaticData()
+        {
+            IStaticDataService staticData = new StaticDataService();
+            staticData.Load();
+            _services.RegisterSingle(staticData);
+        }
 
+        private void RegisterUiFactory()
+        {
+            _services.RegisterSingle<IUIFactory>(
+           new UIFactory(
+           _services.Single<IAssetsProvider>(),
+           _services.Single<IStaticDataService>(),
+           _services.Single<IGameStateMachine>()
+           ));
+        }
         #endregion
     }
 }
