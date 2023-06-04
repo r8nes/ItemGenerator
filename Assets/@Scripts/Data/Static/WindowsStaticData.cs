@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using ItemGenerator.Data;
 using UnityEngine;
 
-namespace ItemGenerator.Service
+namespace ItemGenerator.Data
 {
     [CreateAssetMenu(fileName = "WindowData", menuName = "StaticData/Window")]
     public class WindowsStaticData : BaseStaticData

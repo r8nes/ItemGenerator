@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ItemGenerator.Service
+namespace ItemGenerator.Data
 {
     public class BaseStaticData : ScriptableObject
     {
