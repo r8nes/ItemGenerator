@@ -17,7 +17,7 @@ namespace ItemGenerator.UI.Factory
         private readonly IStaticDataService _staticData;
         private readonly IGameStateMachine _stateMachine;
 
-        private Transform _uiRoot;
+        public Transform _uiRoot { get; set; }
         private List<WindowBase> OpenWindows = new List<WindowBase>(5);
 
         public UIFactory(IAssetsProvider asset, IStaticDataService staticData, IGameStateMachine stateMachine)

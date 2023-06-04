@@ -55,6 +55,7 @@ namespace ItemGenerator.State
            _services.Single<IGameStateMachine>()
            ));
         }
+
         #endregion
     }
 }

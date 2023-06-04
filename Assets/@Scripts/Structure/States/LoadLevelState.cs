@@ -7,9 +7,8 @@ namespace ItemGenerator.State
     {
         private readonly IUIFactory _uiFactory;
         private readonly SceneLoader _sceneLoader;
-
         private readonly GameStateMachine _gameStateMachine;
-
+        
         public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, IUIFactory uiFactory)
         {
             _uiFactory = uiFactory;
@@ -26,11 +25,14 @@ namespace ItemGenerator.State
         {
         }
 
-        private void InitUIRoot() => _uiFactory.CreateUIRoot();
+        private void InitUIRoot()
+        {
+            _uiFactory.CreateUIRoot();
+        }
 
         private void OnLoaded()
-        {
-            InitUIRoot();
+        { 
+
             _gameStateMachine.Enter<GameLoopState>();
         }
     }

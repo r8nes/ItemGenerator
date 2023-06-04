@@ -766,5 +766,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f492e3c3f389e4ab75d871ec7319e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuWindow: {fileID: 0}
-  SettingWindow: {fileID: 0}
+  MenuWindow: {fileID: 1116014592663139471, guid: fe02d3da2ab082a489d265bea2fc7a97, type: 3}
+  SettingWindow: {fileID: 6064702741655094545, guid: 662de3c358cc5334bb4606d9e5a5ff0c, type: 3}
