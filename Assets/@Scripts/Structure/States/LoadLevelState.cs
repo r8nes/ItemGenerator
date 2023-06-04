@@ -1,4 +1,4 @@
-﻿using ItemGenerator.Factory;
+﻿using ItemGenerator.System;
 using ItemGenerator.UI.Factory;
 
 namespace ItemGenerator.State
@@ -6,20 +6,20 @@ namespace ItemGenerator.State
     public class LoadLevelState : IPayLoadState<string>
     {
         private readonly IUIFactory _uiFactory;
-        private readonly IGameFactory _gameFactory;
+        private readonly SceneLoader _sceneLoader;
 
         private readonly GameStateMachine _gameStateMachine;
 
-        public LoadLevelState(GameStateMachine gameStateMachine, IGameFactory gameFactory, IUIFactory uiFactory)
+        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, IUIFactory uiFactory)
         {
-            _gameFactory = gameFactory;
-            _gameStateMachine = gameStateMachine;
             _uiFactory = uiFactory;
+            _sceneLoader = sceneLoader;
+            _gameStateMachine = gameStateMachine;
         }
 
         public void Enter(string sceneName)
         {
-            OnLoaded();
+            _sceneLoader.Load(sceneName, OnLoaded);
         }
 
         public void Exit()

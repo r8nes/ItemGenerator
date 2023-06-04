@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using ItemGenerator.Factory;
 using ItemGenerator.Service;
 using ItemGenerator.System;
 using ItemGenerator.UI.Factory;
@@ -23,7 +22,7 @@ namespace ItemGenerator.State
 
                 [typeof(LoadLevelState)] = new LoadLevelState(
                 this,
-                services.Single<IGameFactory>(),
+                sceneLoader,
                 services.Single<IUIFactory>()),
 
                 [typeof(LoadProgressState)] = new LoadProgressState(this),
