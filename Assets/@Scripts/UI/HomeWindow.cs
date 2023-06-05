@@ -17,6 +17,8 @@ namespace ItemGenerator.UI
             _homeRectTransform.DOAnchorPosX(0, 0f);
         }
 
+        #region Animated Methods
+
         public void ShowSettingsMenu()
         {
             Hide(-1);
@@ -41,7 +43,9 @@ namespace ItemGenerator.UI
             SettingWindow.DOAnchorPosX(SettingWindow.rect.width, 0.3f);
         }
 
-        private void Show(float delay = 0f)
+        #endregion
+
+        private void Show()
         {
             _homeRectTransform.DOAnchorPosX(0, 0.3f);
         }

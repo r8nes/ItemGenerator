@@ -3,6 +3,6 @@
     public enum WindowId
     {
         UNKNOWN = 0,
-        SHOP = 1
+        ITEM = 1
     }
 }

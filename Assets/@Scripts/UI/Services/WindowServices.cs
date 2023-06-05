@@ -17,7 +17,7 @@ namespace ItemGenerator.UI.Services
             {
                 case WindowId.UNKNOWN:
                     break;
-                case WindowId.SHOP:
+                case WindowId.ITEM:
                     //_uiFactory.CreateShop();
                     break;
              }

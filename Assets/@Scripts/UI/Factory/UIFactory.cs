@@ -27,12 +27,12 @@ namespace ItemGenerator.UI.Factory
             _stateMachine = stateMachine;
         }
 
-        //public void CreateShop()
-        //{
-        //    WindowConfig config = _staticData.ForWindow(WindowId.SHOP);
-        //    WindowBase window = Object.Instantiate(config.Prefab, _uiRoot);
-        //    window.Construct(_progressService);
-        //}
+        public void CreateShop()
+        {
+            WindowConfigData config = _staticData.ForWindow(WindowId.ITEM);
+            WindowBase window = Object.Instantiate(config.Prefab, _uiRoot);
+           
+        }
 
         public void CreateUIRoot()
         {
