@@ -31,8 +31,8 @@ namespace ItemGenerator.State
         }
 
         private void OnLoaded()
-        { 
-
+        {
+            InitUIRoot();
             _gameStateMachine.Enter<GameLoopState>();
         }
     }

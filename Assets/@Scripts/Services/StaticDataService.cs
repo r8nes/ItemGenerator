@@ -12,7 +12,7 @@ namespace ItemGenerator.Service
         private const string IMAGES_PATH = "Data/Images/ImageData";
 
         private Dictionary<WindowId, WindowConfigData> _windowConfigs;
-        private Dictionary<ImageTypeId, ImageTypeConfigData> _imageTypeConfigs;
+        private Dictionary<ItemTypeId, ImageTypeConfigData> _imageTypeConfigs;
 
         public void Load()
         {
@@ -28,7 +28,7 @@ namespace ItemGenerator.Service
          ? data
          : null;
 
-        public ImageTypeConfigData ForItemImage(ImageTypeId imageId) =>
+        public ImageTypeConfigData ForItemImage(ItemTypeId imageId) =>
            _imageTypeConfigs.TryGetValue(imageId, out ImageTypeConfigData data)
          ? data
          : null;

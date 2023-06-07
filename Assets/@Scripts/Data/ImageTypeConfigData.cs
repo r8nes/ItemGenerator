@@ -6,7 +6,7 @@ namespace ItemGenerator.Data
     [Serializable]
     public class ImageTypeConfigData
     {
-        public ImageTypeId ImageId;
+        public ItemTypeId ImageId;
         public Sprite Icon;
     }
 }

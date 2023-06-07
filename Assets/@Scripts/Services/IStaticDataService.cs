@@ -6,7 +6,7 @@ namespace ItemGenerator.Service
     public interface IStaticDataService : IService
     { 
         WindowConfigData ForWindow(WindowId windowId);
-        ImageTypeConfigData ForItemImage(ImageTypeId windowId);
+        ImageTypeConfigData ForItemImage(ItemTypeId windowId);
 
         void Load();
     }

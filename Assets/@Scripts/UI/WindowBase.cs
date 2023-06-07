@@ -19,16 +19,16 @@ namespace ItemGenerator.UI
         }
 
         private void Awake() => OnAwake();
-
         private void Start()
         {
             SubScribeUpdates();
         }
-
         private void OnDestroy() => CleanUp();
+
         protected virtual void OnAwake() => CloseButton.onClick.AddListener(() => Destroy(gameObject));
         protected virtual void SubScribeUpdates() { }
         protected virtual void CleanUp() { }
+
         public WindowId GetId()
         {
             return _windowId;

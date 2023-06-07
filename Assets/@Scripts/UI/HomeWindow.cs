@@ -6,15 +6,14 @@ namespace ItemGenerator.UI
     [RequireComponent(typeof(RectTransform))]
     public class HomeWindow : MonoBehaviour
     {
-        private RectTransform _homeRectTransform;
-
-        [SerializeField] private RectTransform MenuWindow;
-        [SerializeField] private RectTransform SettingWindow;
+        [SerializeField] private RectTransform _homeRectTransform;
+        [SerializeField] private RectTransform _menuWindow;
+        [SerializeField] private RectTransform _settingWindow;
 
         void Start()
         {
-            _homeRectTransform = GetComponent<RectTransform>();
-            _homeRectTransform.DOAnchorPosX(0, 0f);
+            if (_homeRectTransform != null)
+                _homeRectTransform.DOAnchorPosX(0, 0f);
         }
 
         #region Animated Methods
@@ -22,25 +21,25 @@ namespace ItemGenerator.UI
         public void ShowSettingsMenu()
         {
             Hide(-1);
-            SettingWindow.DOAnchorPosX(0, 0.3f);
+            _settingWindow.DOAnchorPosX(0, 0.3f);
         }
 
         public void ShowMenuWindow()
         {
             Hide();
-            MenuWindow.DOAnchorPosX(0, 0.3f);
+            _menuWindow.DOAnchorPosX(0, 0.3f);
         }
 
         public void HideMenuWindow()
         {
             Show();
-            MenuWindow.DOAnchorPosX(MenuWindow.rect.width*-1, 0.3f);
+            _menuWindow.DOAnchorPosX(_menuWindow.rect.width*-1, 0.3f);
         }
 
         public void HideSettingWindow() 
         {
             Show();
-            SettingWindow.DOAnchorPosX(SettingWindow.rect.width, 0.3f);
+            _settingWindow.DOAnchorPosX(_settingWindow.rect.width, 0.3f);
         }
 
         #endregion

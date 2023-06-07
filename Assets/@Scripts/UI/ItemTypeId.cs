@@ -1,6 +1,6 @@
 ﻿namespace ItemGenerator.Data
 {
-    public enum ImageTypeId 
+    public enum ItemTypeId 
     {
         SWORD = 0,
         ARMOR = 1,

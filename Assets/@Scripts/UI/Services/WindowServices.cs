@@ -11,16 +11,16 @@ namespace ItemGenerator.UI.Services
             _uiFactory = factory;
         }
 
-        public void Open(WindowId WindowId) 
+        public void Open(WindowId windowId) 
         {
-            switch (WindowId)
+            if (windowId == WindowId.ITEM)
             {
-                case WindowId.UNKNOWN:
-                    break;
-                case WindowId.ITEM:
-                    //_uiFactory.CreateShop();
-                    break;
-             }
+
+                _uiFactory.CreateItemInfoWindow();
+                return;
+            }
+
+            _uiFactory.CreateWindowById(windowId);
         }
     }
 }
